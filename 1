@@ -1,0 +1,94 @@
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Pod","metadata":{"annotations":{},"name":"busybox","namespace":"default"},"spec":{"containers":[{"args":["sleep","1000"],"image":"radical:busyboxplus:curl","name":"busybox"}]}}
+  creationTimestamp: "2019-10-04T09:21:00Z"
+  name: busybox
+  namespace: default
+  resourceVersion: "8020"
+  selfLink: /api/v1/namespaces/default/pods/busybox
+  uid: 47b32b95-e688-11e9-afd7-0242ac110079
+spec:
+  containers:
+  - args:
+    - sleep
+    - "1000"
+    image: radical:busyboxplus:curl
+    imagePullPolicy: IfNotPresent
+    name: busybox
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: default-token-pbfpd
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: node01
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: default-token-pbfpd
+    secret:
+      defaultMode: 420
+      secretName: default-token-pbfpd
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2019-10-04T09:21:00Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2019-10-04T09:21:00Z"
+    message: 'containers with unready status: [busybox]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2019-10-04T09:21:00Z"
+    message: 'containers with unready status: [busybox]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2019-10-04T09:21:00Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - image: radical:busyboxplus:curl
+    imageID: ""
+    lastState: {}
+    name: busybox
+    ready: false
+    restartCount: 0
+    state:
+      waiting:
+        message: 'Failed to apply default image tag "radical:busyboxplus:curl": couldn''t
+          parse image reference "radical:busyboxplus:curl": invalid reference format'
+        reason: InvalidImageName
+  hostIP: 172.17.0.123
+  phase: Pending
+  podIP: 10.40.0.5
+  qosClass: BestEffort
+  startTime: "2019-10-04T09:21:00Z"
