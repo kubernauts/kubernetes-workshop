@@ -8,7 +8,7 @@ kubectl - the Kubernetes command-line tool, allows you to run commands against K
     1.4 [Expose](#14-expose)
     1.5 [Delete](#15-delete)
 
-# 1. Basic Operations
+## 1. Basic Operations
 <table>
     <tr>
 	<td><a href="#1.1-create">create</a></td>
@@ -19,7 +19,7 @@ kubectl - the Kubernetes command-line tool, allows you to run commands against K
     </tr>
 </table>
 
-## 1.1  `create`
+### 1.1  `create`
 Create a resource from a file or from stdin. Acceted formats are JSON and YAML.
 
 Usage
