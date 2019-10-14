@@ -1,12 +1,12 @@
 kubectl - the Kubernetes command-line tool, allows you to run commands against Kubernets cluster. You can use kubectl to deploy applications, inspect and manage cluster resources and view logs. 
 
 ## Table of Contents 
-  1. [Basic Operations](#1-basic-operations)
-   1.1. [Create](#11-create)
-   1.2. [Get](#12-get)
-   1.3. [Run](#13-run)
-   1.4. [Expose](#14-expose)
-   1.5. [Delete](#15-delete)
+  1.  [Basic Operations](#1-basic-operations)
+     1.1. [Create](#11-create)
+     1.2. [Get](#12-get)
+     1.3. [Run](#13-run)
+     1.4. [Expose](#14-expose)
+     1.5. [Delete](#15-delete)
   2. [App Managment](#2-app-managment)
    2.1. [apply](#21-apply)
 
