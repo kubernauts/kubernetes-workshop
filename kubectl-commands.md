@@ -7,6 +7,9 @@ kubectl - the Kubernetes command-line tool, allows you to run commands against K
     1.3. [Run](#13-run)
     1.4. [Expose](#14-expose)
     1.5. [Delete](#15-delete)
+  2. [App Managment](#2-app-managment)
+    2.1. [apply](#21-apply)
+
 
 ## 1. Basic Operations
 <table>
@@ -19,9 +22,13 @@ kubectl - the Kubernetes command-line tool, allows you to run commands against K
     </tr>
 </table>
 
-### 1.1  `create`
-Create a resource from a file or from stdin. Acceted formats are JSON and YAML.
+## 1.1  `create`
+Create a resource from a file or from stdin. Accepted formats are JSON and YAML.
 
 Usage
 ```bash
 kubectl create -f FILENAME 
+```
+
+## 2. App Managment
+
