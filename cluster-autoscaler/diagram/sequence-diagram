@@ -1,0 +1,8 @@
+title CA sequence diagram
+
+k8s API->NODE: scheduling action
+NODE->k8s API: no space to schedule pod
+k8s API->CA : request Cluster autoscaler
+CA->GCP/Azure: need more nodes for pending pod
+NODE<-GCP/Azure: grant node
+k8s API->NODE: schedule pending pod
