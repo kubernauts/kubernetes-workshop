@@ -8,9 +8,10 @@ The cluster autoscaler will look out for pending nodes and then scale up based o
 A metrics tools will handle logs and metrics of the cluster for the different autoscaling iterations
 
 
-## Context
-
-We are using kubernetes cluster autoscaler
+## Overview
+In a cloud environement, We are using a service managed cluster that manages its nodes with an autoscaler.
+This autoscaler automatically resizes clusters based on the demands of the workloads you want to run : it creates
+node for pending pod and delete node if is underutilized.Indeed, with autoscaler you pay only what you use.
 
 
 ## What we are using
@@ -24,7 +25,10 @@ GCP/Azure dashboard to handle metrics
 
 
 ## State diagram
-
+Step 1 : pods are in pending state
+<br/> Step 2 : additional nodes needed
+<br/> Step 3 : node is granted 
+<br/> Step 4 : pods are scheduled on nodes by the scheduler
 ![Alt text](https://github.com/fahedouch/kubernetes-workshop/blob/cluster_autoscaler_initial_commit/cluster-autoscaler/state-diagram.png "CA state diagram")
 
 
