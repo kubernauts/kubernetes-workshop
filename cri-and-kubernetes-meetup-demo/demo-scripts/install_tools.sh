@@ -65,7 +65,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 }
 
 function enbale_pod_scheduling_on_master {
-sudo kubectl taint nodes --all node-role.kubernetes.io/master-
+kubectl taint nodes --all node-role.kubernetes.io/master-
 }
 
 function setup_network {

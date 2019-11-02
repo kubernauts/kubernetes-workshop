@@ -84,7 +84,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ## Step 8: Pod scheduling
 add taint to master node in order to enable pod scheduling on this node
 ```bash
-sudo kubectl taint nodes --all node-role.kubernetes.io/master-
+kubectl taint nodes --all node-role.kubernetes.io/master-
 ```
 
 ## Step 9: Setup cluster network
